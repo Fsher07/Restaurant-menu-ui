@@ -31,7 +31,8 @@ header {
   gap: 2rem;
   margin-left: 20%;
   font-size: 20px;
-  
+}
+
 .footer-section {
   display: flex;
   flex-direction: column;
