@@ -1,0 +1,31 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: 2px solid #000;
+  width: auto;
+  font-size: 18px;
+}
+
+.footer-section p {
+  margin-left: 3%;
+}
+
+.footer-section .bottom {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  border: 2px solid #000;
+  padding-right: 2px;
+}
