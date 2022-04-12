@@ -1,5 +1,5 @@
-/* Core Styles */
 
+/* Core Styles */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
@@ -31,4 +31,28 @@ header {
   gap: 2rem;
   margin-left: 20%;
   font-size: 20px;
+  
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: 2px solid #000;
+  width: auto;
+  font-size: 18px;
+}
+
+.footer-section p {
+  margin-left: 3%;
+}
+
+.footer-section .bottom {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  border: 2px solid #000;
+  padding-right: 2px;
 }
