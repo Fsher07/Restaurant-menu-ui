@@ -232,7 +232,6 @@
     "fs-constants": "^1.0.0",
     "fs-monkey": "^1.0.3",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.2",
     "function-bind": "^1.1.1",
     "functional-red-black-tree": "^1.0.1",
     "gensync": "^1.0.0-beta.2",
