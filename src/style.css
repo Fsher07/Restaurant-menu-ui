@@ -17,6 +17,7 @@ main {
   column-gap: 10%;
   row-gap: 5%;
 }
+
 .list-item {
   display: flex;
   flex-direction: column;
@@ -42,10 +43,11 @@ main {
 }
 
 .list-item .meal-title .like-icon {
-  color: #000;  
+  color: #000;
 }
 
-.list-item .comments, .list-item .reservations {
+.list-item .comments,
+.list-item .reservations {
   background: #fff;
   padding: 2%;
   font-family: 'Lato', sans-serif;
