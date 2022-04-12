@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1% 2%;
+  border: 2px solid #000;
+  width: auto;
+  font-size: 18px;
+}
