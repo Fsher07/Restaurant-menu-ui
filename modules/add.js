@@ -7,9 +7,10 @@ const populateMeals = async () => {
   allMeals.categories.forEach((meal) => {
     const listItem = document.createElement('div');
     listItem.id = meal.idCategory;
+    listItem.className = 'list-item';
     listItem.innerHTML = 
-        `<img src=${meal.strCategoryThumb} alt="Meal-image">
-        <div>
+        `<img src=${meal.strCategoryThumb} alt="Meal-image" class="meal-image">
+        <div class="meal-title">
           <h2>${meal.strCategory}</h2>
           <i class="fas fa-heart like-icon"></i>
         </div>

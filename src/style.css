@@ -5,6 +5,53 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+main {
+  padding: 2% 10%;
+}
+
+/* Homepage-section */
+.list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  width: auto;
+  column-gap: 10%;
+  row-gap: 5%;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2%;
+}
+
+.list-item .meal-image {
+  width: 200px;
+  height: auto;
+}
+
+.list-item .meal-title {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item .meal-title h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.list-item .meal-title .like-icon {
+  color: #000;  
+}
+
+.list-item .comments, .list-item .reservations {
+  background: #fff;
+  padding: 2%;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Footer-section */
 .footer-section {
   display: flex;
   flex-direction: column;
