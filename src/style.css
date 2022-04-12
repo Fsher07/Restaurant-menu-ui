@@ -7,13 +7,29 @@ body {
 
 .footer-section {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1% 2%;
+  padding: 0;
   border: 2px solid #000;
   width: auto;
   font-size: 18px;
+}
+
+.footer-section p {
+  margin-left: 3%;
+}
+
+.footer-section .bottom {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  border: 2px solid #000;
+  padding-right: 2px;
+}
+
+.footer-section .bottom .diagonals {
+ 
 }
