@@ -1,5 +1,5 @@
 import './style.css';
-import populateMeals, { popupComments, closeCommentWindow, addComment } from '../modules/add.js';
+import populateMeals, { popupComments, closeCommentWindow, addComment, displayComments } from '../modules/add.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   populateMeals();
@@ -17,5 +17,6 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
   if (e.target.className === 'comment-btn') {
     addComment(e.target.parentElement.parentElement.id);
+    displayComments(e.target.parentElement.parentElement.id);
   }
 });

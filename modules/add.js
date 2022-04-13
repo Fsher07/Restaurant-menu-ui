@@ -1,5 +1,5 @@
 import { getMeals } from './api.js';
-import { addNewLike, getLikes, addNewComment } from './api2.js';
+import { addNewLike, getLikes, addNewComment, getComments } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
 
@@ -55,11 +55,31 @@ export const popupComments = async (meal) => {
   commentWindow.appendChild(closeBtn);
 };
 
-export const addComment = (itemID) => {
-  console.log(typeof document.querySelector('.name-input').value);
+export const addComment = async (itemID) => {
   if (document.querySelector('.name-input').value !== '' && document.querySelector('.comment-input').value !== '') {
-     addNewComment(itemID, document.querySelector('.name-input').value, document.querySelector('.comment-input').value);
-  }
+    const reponse = await addNewComment(itemID, document.querySelector('.name-input').value, document.querySelector('.comment-input').value);
+    if (reponse === 201) {
+      await getComments(itemID);
+    }
+    }
+  };
+
+export const displayComments = async (itemID) => {
+  const allComments = await getComments(itemID);
+  const commentWindow = document.querySelector('.comment-window');
+  const commentList = document.createElement('div');
+  commentList.className = 'comment-list';
+  commentWindow.appendChild(commentList);
+  allComments.forEach((comment) => {
+    const commentItem = document.createElement('div');
+    commentItem.className = 'comment-item';
+    commentItem.innerHTML = `
+      <div class="comment-info">
+        <p class="comment-text">${comment.username}:  ${comment.comment}</p>
+      </div>
+    `;
+    commentList.appendChild(commentItem);
+  });
 };
 
 export const closeCommentWindow = () => {

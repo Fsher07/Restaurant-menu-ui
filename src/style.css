@@ -207,3 +207,15 @@ header {
   color: #000;
   background: #fff;
 }
+
+.comment-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 5px;
+}
+
+.comment-text {
+  display: flex;
+  font-size: 10px;
+}
+
