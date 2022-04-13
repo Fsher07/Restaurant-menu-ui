@@ -209,16 +209,12 @@ header {
 
 .comment-list {
   display: grid;
-  margin-top: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
   row-gap: 5px;
 }
 
 .comment-text {
   display: flex;
   font-size: 10px;
-}
-
-.comment-counter {
-
 }

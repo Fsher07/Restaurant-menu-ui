@@ -21,5 +21,6 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
   if (e.target.className === 'comment-btn') {
     addComment(e.target.parentElement.parentElement.id);
+    closeCommentWindow();
   }
 });
