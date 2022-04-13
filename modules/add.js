@@ -5,7 +5,7 @@ const listItems = document.querySelector('.list-items');
 
 export const populateMeals = async () => {
   const allMeals = await getMeals();
-  let  allLikes = await getLikes();
+  let allLikes = await getLikes();
   allLikes = JSON.parse(allLikes);
   allMeals.categories.forEach((meal) => {
     let mealLikes = 0;
@@ -34,20 +34,16 @@ export const populateMeals = async () => {
 };
 
 export const addNewLikeToAPI = (mealId, likes) => {
-  //const allLikes = await getLikes();
-  
   const likeSpans = document.querySelectorAll('.meal-likes');
   likeSpans.forEach((likeSpan) => {
     if (likeSpan.parentNode.id === mealId) {
-      let newlikes = parseInt(likes) + 1;
+      let newlikes = parseInt(likes, 10) + 1;
       newlikes = newlikes.toString();
       likeSpan.textContent = `${newlikes} likes`;
-      updateLike(mealId, newlikes)
+      updateLike(mealId, newlikes);
     }
   });
-  
-  //let mealLikes = allLikes.find(like => like.item_id === mealId);
-}
+};
 
 export const popupComments = async (meal) => {
   const allMeals = await getMeals();
@@ -71,4 +67,3 @@ export const closeCommentWindow = () => {
 };
 
 export default populateMeals;
-
