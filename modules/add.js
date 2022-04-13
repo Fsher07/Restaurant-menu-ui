@@ -1,13 +1,14 @@
 import { getMeals } from './api.js';
-import { addNewLike, getLikes } from './api2.js';
+import { addNewLike, getLikes, updateLike } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
 
-const populateMeals = async () => {
+export const populateMeals = async () => {
   const allMeals = await getMeals();
-  const allLikes = await getLikes();
+  let  allLikes = await getLikes();
+  allLikes = JSON.parse(allLikes);
   allMeals.categories.forEach((meal) => {
-    let mealLikes;
+    let mealLikes = 0;
     if (allLikes.length === 0) {
       addNewLike(meal.idCategory);
     }
@@ -32,4 +33,18 @@ const populateMeals = async () => {
   });
 };
 
-export default populateMeals;
+export const addNewLikeToAPI = (mealId, likes) => {
+  //const allLikes = await getLikes();
+  
+  const likeSpans = document.querySelectorAll('.meal-likes');
+  likeSpans.forEach((likeSpan) => {
+    if (likeSpan.parentNode.id === mealId) {
+      let newlikes = parseInt(likes) + 1;
+      newlikes = newlikes.toString();
+      likeSpan.textContent = `${newlikes} likes`;
+      updateLike(mealId, newlikes)
+    }
+  });
+  
+  //let mealLikes = allLikes.find(like => like.item_id === mealId);
+}
