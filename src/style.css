@@ -10,7 +10,7 @@
 }
 
 main {
-  padding: 2% 10%;
+  padding: 2% 15%;
 }
 
 /* Homepage-section */
@@ -77,14 +77,21 @@ header {
   align-items: center;
   padding-left: 10%;
   margin-top: 2rem;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .navList {
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   margin-left: 20%;
   font-size: 20px;
+}
+
+.tags {
+  color: #562629;
 }
 
 /* Footer-section */
@@ -108,4 +115,55 @@ header {
   background: gray;
   border: 2px solid #000;
   padding-right: 2px;
+}
+
+/* meal popup comment window */
+.comment-window {
+  display: none;
+}
+
+.show-comment-window {
+  display: grid;
+  position: fixed;
+  max-width: 850px;
+  max-height: 530px;
+  width: 80vw;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 3rem;
+  padding: 2rem;
+  z-index: 1;
+  box-shadow: 10px 10px 10px #000;
+  background: #fff;
+}
+
+.comment-meal-image {
+  width: 300px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+}
+
+.comment-meal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.window-title {
+  margin: 2rem 0;
+  font-size: 30px;
+}
+
+.window-description {
+  font-size: 15px;
 }
