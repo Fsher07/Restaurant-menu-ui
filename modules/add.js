@@ -1,5 +1,7 @@
 import { getMeals } from './api.js';
-import { addNewLike, getLikes, addNewComment, getComments } from './api2.js';
+import {
+  addNewLike, getLikes, addNewComment, getComments,
+} from './api2.js';
 
 const listItems = document.querySelector('.list-items');
 
@@ -61,8 +63,8 @@ export const addComment = async (itemID) => {
     if (reponse === 201) {
       await getComments(itemID);
     }
-    }
-  };
+  }
+};
 
 export const displayComments = async (itemID) => {
   const allComments = await getComments(itemID);

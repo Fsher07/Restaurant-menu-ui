@@ -126,7 +126,6 @@ header {
   display: grid;
   position: fixed;
   max-width: 1000px;
-  max-height: auto;
   width: 90vw;
   height: auto;
   top: 50%;
@@ -201,8 +200,8 @@ header {
 }
 
 .comment-btn {
-  width: 20%;
-  min-width: fit-content;
+  min-width: 20%;
+  width: fit-content;
   height: 20px;
   color: #000;
   background: #fff;
@@ -218,4 +217,3 @@ header {
   display: flex;
   font-size: 10px;
 }
-

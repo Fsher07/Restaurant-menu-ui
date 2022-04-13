@@ -32,7 +32,7 @@ export const getLikes = async () => {
 };
 
 export const addNewComment = async (itemID, inputName, inputComment) => {
-  const input = { "item_id": itemID, "username": inputName, "comment": inputComment };
+  const input = { item_id: itemID, username: inputName, comment: inputComment };
   const result = await fetch(`${baseURL}/apps/${appId}/comments/`, {
     method: 'POST',
     headers: {
@@ -41,14 +41,10 @@ export const addNewComment = async (itemID, inputName, inputComment) => {
     body: JSON.stringify(input),
   });
   return result.status;
-}
+};
 
 export const getComments = async (id) => {
-  console.log(id);
   const result = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/NtHb3d5dTrNZkt8GXbKc/comments?item_id=${id}`);
   const comments = await result.json();
-  console.log(comments)
   return comments;
-}
-
-
+};

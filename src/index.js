@@ -1,5 +1,8 @@
 import './style.css';
-import populateMeals, { popupComments, closeCommentWindow, addComment, displayComments } from '../modules/add.js';
+import populateMeals,
+{
+  popupComments, closeCommentWindow, addComment, displayComments,
+} from '../modules/add.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   populateMeals();
