@@ -114,6 +114,7 @@ header {
   padding-right: 2px;
 }
 
+/* meal popup comment window */
 .comment-window {
   display: none;
 }
@@ -122,6 +123,8 @@ header {
   display: flex;
   width: 80vw;
   height: 50vw;
+  max-width: 850px;
+  max-height: 530px;
   top: 50%;
   left: 50%;
   gap: 3rem;
@@ -132,6 +135,7 @@ header {
   align-items: center;
   justify-content: center;
   box-shadow: 10px 10px 10px #000;
+  padding-left: 2rem;
 }
 
 .comment-meal-image {
