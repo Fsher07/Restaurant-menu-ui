@@ -120,27 +120,25 @@ header {
 }
 
 .show-comment-window {
-  display: flex;
-  width: 80vw;
-  height: 50vw;
+  display: grid;
+  position: fixed;
   max-width: 850px;
   max-height: 530px;
+  width: 80vw;
+  height: auto;
   top: 50%;
   left: 50%;
-  gap: 3rem;
   transform: translate(-50%, -50%);
-  position: fixed;
-  background: #fff;
+  gap: 3rem;
+  padding: 2rem;
   z-index: 1;
-  align-items: center;
-  justify-content: center;
   box-shadow: 10px 10px 10px #000;
-  padding-left: 2rem;
+  background: #fff;
 }
 
 .comment-meal-image {
   width: 300px;
-  height: 300px;
+  height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -152,11 +150,14 @@ header {
 }
 
 .comment-meal-info {
-  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 .window-title {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   font-size: 30px;
 }
 
