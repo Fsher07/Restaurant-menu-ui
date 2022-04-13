@@ -48,3 +48,27 @@ export const addNewLikeToAPI = (mealId, likes) => {
   
   //let mealLikes = allLikes.find(like => like.item_id === mealId);
 }
+
+export const popupComments = async (meal) => {
+  const allMeals = await getMeals();
+  const commentMeal = allMeals.categories[meal - 1];
+  const commentWindow = document.querySelector('.comment-window');
+  const closeBtn = document.createElement('i');
+  closeBtn.className = 'fa-solid fa-x';
+  commentWindow.innerHTML = `
+    <div class="comment-meal-info">
+      <img src=${commentMeal.strCategoryThumb} alt="Meal-image" class="comment-meal-image">
+      <h2 class='window-title'>${commentMeal.strCategory}</h2>
+      <p class='window-description'>${commentMeal.strCategoryDescription}</p>
+    </div>`;
+  commentWindow.classList.toggle('show-comment-window');
+  commentWindow.appendChild(closeBtn);
+};
+
+export const closeCommentWindow = () => {
+  const commentWindow = document.querySelector('.comment-window');
+  commentWindow.classList.toggle('show-comment-window');
+};
+
+export default populateMeals;
+
