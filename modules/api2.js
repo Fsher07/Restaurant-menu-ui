@@ -31,14 +31,15 @@ export const getLikes = async () => {
   return likes;
 };
 
-export const addNewComment = async (itemId, comment) => {
-  const data = { item_id: itemId, comment };
+export const addNewComment = async (itemID, inputName, inputComment) => {
+  const input = {"item_id": itemID, "username": inputName, "comment": inputComment};
   const result = await fetch(`${baseURL}/apps/${appId}/comments/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(input),
   });
+  console.log(result.json());
   return result;
 }

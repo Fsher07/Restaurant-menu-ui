@@ -1,5 +1,5 @@
 import { getMeals } from './api.js';
-import { addNewLike, getLikes } from './api2.js';
+import { addNewLike, getLikes, addNewComment } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
 
@@ -36,6 +36,7 @@ export const popupComments = async (meal) => {
   const allMeals = await getMeals();
   const commentMeal = allMeals.categories[meal - 1];
   const commentWindow = document.querySelector('.comment-window');
+  commentWindow.id = meal;
   const closeBtn = document.createElement('i');
   closeBtn.className = 'fa-solid fa-x';
   commentWindow.innerHTML = `
@@ -46,13 +47,19 @@ export const popupComments = async (meal) => {
     </div>
     <h3 class="comment-title">Add a comment</h3>
     <div class="comment-form">
-      <input type="text" class="name-input" placeholder="Your name">
-      <textarea class="comment-input" placeholder="Your insgihts..."></textarea>
+      <input type="text" class="name-input" placeholder="Your name" required/>
+      <textarea class="comment-input" placeholder="Your insgihts..." required/></textarea>
       <button class="comment-btn">Comment</button>
     </div>`;
   commentWindow.classList.toggle('show-comment-window');
   commentWindow.appendChild(closeBtn);
-  
+};
+
+export const addComment = (itemID) => {
+  console.log(typeof document.querySelector('.name-input').value);
+  if (document.querySelector('.name-input').value !== '' && document.querySelector('.comment-input').value !== '') {
+     addNewComment(itemID, document.querySelector('.name-input').value, document.querySelector('.comment-input').value);
+  }
 };
 
 export const closeCommentWindow = () => {
