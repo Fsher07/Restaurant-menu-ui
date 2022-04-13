@@ -6,14 +6,16 @@ const listItems = document.querySelector('.list-items');
 const populateMeals = async () => {
   const allMeals = await getMeals();
   const allLikes = await getLikes();
-  console.log(allLikes[0])
   allMeals.categories.forEach((meal) => {
     let mealLikes;
+    if (allLikes.length === 0) {
+      addNewLike(meal.idCategory);
+    }
     allLikes.forEach((like) => {
       if (like.item_id === meal.idCategory) {
-        mealLikes = like.likes
+        mealLikes = like.likes;
       }
-    })
+    });
     const listItem = document.createElement('div');
     listItem.id = meal.idCategory;
     listItem.className = 'list-item';
@@ -27,7 +29,6 @@ const populateMeals = async () => {
         <button class="reservations">Reservations</button>
     `;
     listItems.appendChild(listItem);
-    addNewLike(meal.idCategory);
   });
 };
 
