@@ -27,9 +27,10 @@ const populateMeals = async () => {
       closeBtn.className = 'fa-solid fa-x';
       commentWindow.innerHTML = `
       <img src=${meal.strCategoryThumb} alt="Meal-image" class="comment-meal-image">
-      <div class="comment-meal-title">
-        <h2>${meal.strCategory}</h2>
-        <p>${meal.strCategoryDescription}</p>`;
+      <div class="comment-meal-info">
+        <h2 class='window-title'>${meal.strCategory}</h2>
+        <p class='window-description'>${meal.strCategoryDescription}</p>
+      </div>`;
       commentWindow.classList.toggle('show-comment-window');
       commentWindow.appendChild(closeBtn);
       closeBtn.addEventListener('click', () => {

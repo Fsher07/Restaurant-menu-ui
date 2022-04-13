@@ -10,7 +10,7 @@
 }
 
 main {
-  padding: 2% 10%;
+  padding: 2% 15%;
 }
 
 /* Homepage-section */
@@ -71,14 +71,21 @@ header {
   align-items: center;
   padding-left: 10%;
   margin-top: 2rem;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .navList {
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   margin-left: 20%;
   font-size: 20px;
+}
+
+.tags {
+  color: #562629;
 }
 
 /* Footer-section */
@@ -112,12 +119,43 @@ header {
 }
 
 .show-comment-window {
-  display: block;
+  display: flex;
+  width: 80vw;
+  height: 50vw;
+  top: 50%;
+  left: 50%;
+  gap: 3rem;
+  transform: translate(-50%, -50%);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: #fff;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.comment-meal-image {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+}
+
+.comment-meal-info {
+  padding-right: 2rem;
+}
+
+.window-title {
+  margin-bottom: 2rem;
+  font-size: 30px;
+}
+
+.window-description {
+  font-size: 15px;
 }
