@@ -43,9 +43,16 @@ export const popupComments = async (meal) => {
       <img src=${commentMeal.strCategoryThumb} alt="Meal-image" class="comment-meal-image">
       <h2 class='window-title'>${commentMeal.strCategory}</h2>
       <p class='window-description'>${commentMeal.strCategoryDescription}</p>
+    </div>
+    <h3 class="comment-title">Add a comment</h3>
+    <div class="comment-form">
+      <input type="text" class="name-input" placeholder="Your name">
+      <textarea class="comment-input" placeholder="Your insgihts..."></textarea>
+      <button class="comment-btn">Comment</button>
     </div>`;
   commentWindow.classList.toggle('show-comment-window');
   commentWindow.appendChild(closeBtn);
+  
 };
 
 export const closeCommentWindow = () => {

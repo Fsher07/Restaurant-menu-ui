@@ -30,3 +30,15 @@ export const getLikes = async () => {
   const likes = await result.json();
   return likes;
 };
+
+export const addNewComment = async (itemId, comment) => {
+  const data = { item_id: itemId, comment };
+  const result = await fetch(`${baseURL}/apps/${appId}/comments/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  return result;
+}
