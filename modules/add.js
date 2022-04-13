@@ -71,6 +71,10 @@ export const displayComments = async (itemID) => {
   const commentWindow = document.querySelector('.comment-window');
   const commentList = document.createElement('div');
   commentList.className = 'comment-list';
+  const counter = document.createElement('span');
+  counter.className = 'comment-counter';
+  counter.innerHTML = `<i class="fa-solid fa-comment"></i>${allComments.length}`;
+  commentWindow.appendChild(counter);
   commentWindow.appendChild(commentList);
   allComments.forEach((comment) => {
     const commentItem = document.createElement('div');

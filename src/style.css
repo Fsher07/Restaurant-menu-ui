@@ -143,7 +143,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.fa-solid {
+.fa-x {
   font-size: 1.5rem;
   top: 25px;
   right: 25px;
@@ -209,6 +209,7 @@ header {
 
 .comment-list {
   display: grid;
+  margin-top: 1rem;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 5px;
 }
@@ -216,4 +217,10 @@ header {
 .comment-text {
   display: flex;
   font-size: 10px;
+}
+
+.comment-counter {
+  position: absolute;
+  top: 71%;
+  right: 70%;
 }
