@@ -13,3 +13,4 @@ document.addEventListener('click', (e) => {
     closeCommentWindow();
   }
 });
+

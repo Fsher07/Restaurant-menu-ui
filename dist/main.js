@@ -16,7 +16,9 @@
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./modules/api.js\");\n\r\n\r\nconst listItems = document.querySelector('.list-items');\r\n\r\nconst populateMeals = async () => {\r\n  const allMeals = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.getMeals)();\r\n  console.log(allMeals.categories);\r\n  allMeals.categories.forEach((meal) => {\r\n    const listItem = document.createElement('div');\r\n    listItem.id = meal.idCategory;\r\n    listItem.className = 'list-item';\r\n    listItem.innerHTML = `<img src=${meal.strCategoryThumb} alt=\"Meal-image\" class=\"meal-image\">\r\n        <div class=\"meal-title\">\r\n          <h2>${meal.strCategory}</h2>\r\n          <i class=\"fas fa-heart like-icon\"></i>\r\n        </div>\r\n        <span></span>\r\n        <button class=\"comments\">Comments</button>\r\n        <button class=\"reservations\">Reservations</button>\r\n    `;\r\n    listItems.appendChild(listItem);\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (populateMeals);\n\n//# sourceURL=webpack://javascript-group-capstone/./modules/add.js?");
+
 
 /***/ }),
 
@@ -40,13 +42,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./modules/api2.js":
+/*!*************************!*\
+  !*** ./modules/api2.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addNewApp\": () => (/* binding */ addNewApp),\n/* harmony export */   \"addNewLike\": () => (/* binding */ addNewLike),\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes)\n/* harmony export */ });\nconst baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';\n\nlet appId = 'NtHb3d5dTrNZkt8GXbKc';\nconst addNewApp = async () => {\n  const result = await fetch(`${baseURL}/apps/`, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    }\n  });\n  if (appId !== '') {\n    appId = await result.text();\n  }\n}\n\nconst addNewLike = async (itemId) => {\n  const data = { item_id: itemId};\n  const result = await fetch(`${baseURL}/apps/${appId}/likes/`, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(data)\n  });\n  return result;\n}\n\nconst getLikes = async () => {\n  const result = await fetch(`${baseURL}/apps/${appId}/likes/`)\n  const likes = await result.json();\n  return likes;\n  \n}\n\n//# sourceURL=webpack://javascript-group-capstone/./modules/api2.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\r\\n/* Core Styles */\\r\\n\\r\\n* {\\r\\n  box-sizing: border-box;\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n  font-family: 'Lato', sans-serif;\\r\\n}\\r\\n\\r\\nmain {\\r\\n  padding: 2% 10%;\\r\\n}\\r\\n\\r\\n/* Homepage-section */\\r\\n.list-items {\\r\\n  display: grid;\\r\\n  grid-template-columns: repeat(3, 25%);\\r\\n  width: auto;\\r\\n  column-gap: 10%;\\r\\n  row-gap: 5%;\\r\\n}\\r\\n\\r\\n.list-item {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  gap: 10px;\\r\\n  padding: 2%;\\r\\n}\\r\\n\\r\\n.list-item .meal-image {\\r\\n  width: 200px;\\r\\n  height: auto;\\r\\n}\\r\\n\\r\\n.list-item .meal-title {\\r\\n  display: flex;\\r\\n  align-self: stretch;\\r\\n  justify-content: space-between;\\r\\n  align-items: center;\\r\\n}\\r\\n\\r\\n.list-item .meal-title h2 {\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n}\\r\\n\\r\\n.list-item .meal-title .like-icon {\\r\\n  color: #000;\\r\\n}\\r\\n\\r\\n.list-item .comments,\\r\\n.list-item .reservations {\\r\\n  background: #fff;\\r\\n  padding: 2%;\\r\\n  font-family: 'Lato', sans-serif;\\r\\n}\\r\\n\\r\\nli {\\r\\n  list-style: none;\\r\\n}\\r\\n\\r\\na {\\r\\n  text-decoration: none;\\r\\n}\\r\\n\\r\\n/* header */\\r\\nheader {\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  padding-left: 10%;\\r\\n  margin-top: 2rem;\\r\\n}\\r\\n\\r\\n.navList {\\r\\n  width: 100%;\\r\\n  display: flex;\\r\\n  gap: 2rem;\\r\\n  margin-left: 20%;\\r\\n  font-size: 20px;\\r\\n}\\r\\n\\r\\n/* Footer-section */\\r\\n.footer-section {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  position: fixed;\\r\\n  left: 0;\\r\\n  right: 0;\\r\\n  bottom: 0;\\r\\n  padding: 0;\\r\\n  border: 2px solid #000;\\r\\n  width: auto;\\r\\n  font-size: 18px;\\r\\n}\\r\\n\\r\\n.footer-section p {\\r\\n  margin-left: 3%;\\r\\n}\\r\\n\\r\\n.footer-section .bottom {\\r\\n  display: flex;\\r\\n  justify-content: flex-end;\\r\\n  background: gray;\\r\\n  border: 2px solid #000;\\r\\n  padding-right: 2px;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascript-group-capstone/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+
 
 /***/ }),
 
@@ -146,7 +160,9 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_add_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/add.js */ \"./modules/add.js\");\n/* harmony import */ var _modules_commentWindow_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/commentWindow.js */ \"./modules/commentWindow.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  (0,_modules_add_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\r\n\r\n(0,_modules_commentWindow_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://javascript-group-capstone/./src/index.js?");
+
 
 /***/ })
 
