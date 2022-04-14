@@ -1,13 +1,15 @@
 import { getMeals } from './api.js';
-import { addNewLike, getLikes } from './api2.js';
+import { addNewLike, getLikes, updateLike } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
+const items = document.querySelector('.all-items');
 
-const populateMeals = async () => {
+export const populateMeals = async () => {
   const allMeals = await getMeals();
-  const allLikes = await getLikes();
+  let allLikes = await getLikes();
+  allLikes = JSON.parse(allLikes);
   allMeals.categories.forEach((meal) => {
-    let mealLikes;
+    let mealLikes = 0;
     if (allLikes.length === 0) {
       addNewLike(meal.idCategory);
     }
@@ -32,6 +34,18 @@ const populateMeals = async () => {
   });
 };
 
+export const addNewLikeToAPI = (mealId, likes) => {
+  const likeSpans = document.querySelectorAll('.meal-likes');
+  likeSpans.forEach((likeSpan) => {
+    if (likeSpan.parentNode.id === mealId) {
+      let newlikes = parseInt(likes, 10) + 1;
+      newlikes = newlikes.toString();
+      likeSpan.textContent = `${newlikes} likes`;
+      updateLike(mealId, newlikes);
+    }
+  });
+};
+
 export const popupComments = async (meal) => {
   const allMeals = await getMeals();
   const commentMeal = allMeals.categories[meal - 1];
@@ -53,4 +67,8 @@ export const closeCommentWindow = () => {
   commentWindow.classList.toggle('show-comment-window');
 };
 
-export default populateMeals;
+export const getItemsTotal = async () => {
+  const allMeals = await getMeals();
+  const mealsCount = allMeals.categories.length;
+  items.append(document.createTextNode(` (${mealsCount})`));
+};
