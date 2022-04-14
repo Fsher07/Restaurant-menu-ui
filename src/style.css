@@ -165,7 +165,7 @@ header {
 }
 
 .window-description {
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .comment-form {
@@ -219,7 +219,7 @@ header {
 
 .comment-text {
   display: flex;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .comment-counter {
