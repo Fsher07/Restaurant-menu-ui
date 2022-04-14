@@ -71,4 +71,4 @@ export const getItemsTotal = async () => {
   const allMeals = await getMeals();
   const mealsCount = allMeals.categories.length;
   items.append(document.createTextNode(` (${mealsCount})`));
-}
+};
