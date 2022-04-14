@@ -1,7 +1,7 @@
 import { getMeals } from './api.js';
 
 import {
-  addNewLike, getLikes, addNewComment, getComments, updateLike
+  addNewLike, getLikes, addNewComment, getComments, updateLike,
 } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
