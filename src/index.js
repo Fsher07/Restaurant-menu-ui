@@ -1,7 +1,7 @@
 import './style.css';
 import populateMeals,
 {
-  popupComments, closeCommentWindow, addComment, displayComments, updateCommentCounter, updateLastComment
+  popupComments, closeCommentWindow, addComment, displayComments, updateCommentCounter,
 } from '../modules/add.js';
 
 document.addEventListener('DOMContentLoaded', () => {

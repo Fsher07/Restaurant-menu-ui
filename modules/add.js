@@ -59,14 +59,10 @@ export const popupComments = async (meal) => {
   commentWindow.classList.toggle('show-comment-window');
 };
 
-export const addComment = async (itemID) => {
-  if (document.querySelector('.name-input').value !== '' && document.querySelector('.comment-input').value !== '') {
-    const reponse = await addNewComment(itemID, document.querySelector('.name-input').value, document.querySelector('.comment-input').value);
-    if (reponse === 201) {
-      await getComments(itemID);
-      updateLastComment(itemID);
-    }
-  }
+export const updateCommentCounter = async (itemID) => {
+  const allComments = await getComments(itemID);
+  const counter = document.querySelector('.comment-counter');
+  counter.innerHTML = `<i class="fa-solid fa-comment"></i>${allComments.length ? allComments.length : 0} comments`;
 };
 
 export const updateLastComment = async (itemID) => {
@@ -84,6 +80,16 @@ export const updateLastComment = async (itemID) => {
   updateCommentCounter(itemID);
 };
 
+export const addComment = async (itemID) => {
+  if (document.querySelector('.name-input').value !== '' && document.querySelector('.comment-input').value !== '') {
+    const reponse = await addNewComment(itemID, document.querySelector('.name-input').value, document.querySelector('.comment-input').value);
+    if (reponse === 201) {
+      await getComments(itemID);
+      updateLastComment(itemID);
+    }
+  }
+};
+
 export const displayComments = async (itemID) => {
   const allComments = await getComments(itemID);
   const commentList = document.querySelector('.comment-list');
@@ -98,12 +104,6 @@ export const displayComments = async (itemID) => {
     commentList.appendChild(commentItem);
   });
   updateCommentCounter(itemID);
-};
-
-export const updateCommentCounter = async (itemID) => {
-  const allComments = await getComments(itemID);
-  const counter = document.querySelector('.comment-counter');
-  counter.innerHTML = `<i class="fa-solid fa-comment"></i>${allComments.length ? allComments.length : 0} comments`;
 };
 
 export const closeCommentWindow = () => {
