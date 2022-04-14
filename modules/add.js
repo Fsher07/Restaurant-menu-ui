@@ -2,6 +2,7 @@ import { getMeals } from './api.js';
 import { addNewLike, getLikes, updateLike } from './api2.js';
 
 const listItems = document.querySelector('.list-items');
+const items = document.querySelector('.all-items');
 
 export const populateMeals = async () => {
   const allMeals = await getMeals();
@@ -66,4 +67,8 @@ export const closeCommentWindow = () => {
   commentWindow.classList.toggle('show-comment-window');
 };
 
-export default populateMeals;
+export const getItemsTotal = async () => {
+  const allMeals = await getMeals();
+  const mealsCount = allMeals.categories.length;
+  items.append(document.createTextNode(` (${mealsCount})`));
+}
