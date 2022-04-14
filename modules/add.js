@@ -129,5 +129,10 @@ export const closeCommentWindow = () => {
 export const getItemsTotal = async () => {
   const allMeals = await getMeals();
   const mealsCount = allMeals.categories.length;
+  return mealsCount;
+};
+
+export const displayItemsTotal = async () => {
+  const mealsCount = await getItemsTotal();
   items.append(document.createTextNode(` (${mealsCount})`));
 };

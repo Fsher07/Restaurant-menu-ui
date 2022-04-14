@@ -4,17 +4,17 @@ import {
   addNewLikeToAPI,
   popupComments,
   closeCommentWindow,
-  getItemsTotal,
   addComment,
   displayComments,
   updateCommentCounter,
+  displayItemsTotal,
 } from '../modules/add.js';
 import { addNewApp } from '../modules/api2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   populateMeals();
   addNewApp();
-  getItemsTotal();
+  displayItemsTotal();
 });
 
 document.addEventListener('click', (e) => {
