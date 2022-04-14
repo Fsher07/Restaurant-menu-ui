@@ -124,30 +124,29 @@ header {
 
 .show-comment-window {
   display: grid;
+  width: 50vw;
   position: fixed;
-  max-width: 1000px;
-  width: 90vw;
-  height: auto;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   padding: 2rem;
   z-index: 1;
   box-shadow: 10px 10px 10px #000;
   background: #fff;
+  border: 3px solid #000;
 }
 
 .comment-meal-image {
-  width: 300px;
+  width: 200px;
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .fa-x {
+  display: flex;
+  justify-content: flex-end;
   font-size: 1.5rem;
-  top: 25px;
-  right: 25px;
-  position: absolute;
+  margin-bottom: 5%;
 }
 
 .comment-meal-info {
@@ -159,17 +158,18 @@ header {
 
 .window-title {
   margin: 2rem 0;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .window-description {
-  font-size: 15px;
+  font-size: 8px;
 }
 
 .comment-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-left: 10%;
 }
 
 .comment-title {
@@ -210,11 +210,23 @@ header {
 .comment-list {
   display: grid;
   margin-top: 0.5rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1, 3fr);
   row-gap: 5px;
 }
 
 .comment-text {
   display: flex;
-  font-size: 10px;
+  font-size: 8px;
+}
+
+.comment-counter {
+  font-size: 12px;
+}
+
+.main-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
 }
