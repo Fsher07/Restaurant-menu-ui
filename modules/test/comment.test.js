@@ -1,12 +1,12 @@
-//jest test
+// jest test
 
 describe('checking the correct total number of comments', () => {
   document.body.innerHTML = `
     <span class="comment-counter"></span>
     <ul class="comment-section">
     </ul>`;
-  const commentapi1 = [{user1: 'comment1'}];
-  const commentapi2 = [{user2: 'comment2'}, {user3: 'comment3'}];
+  const commentapi1 = [{ user1: 'comment1' }];
+  const commentapi2 = [{ user2: 'comment2' }, { user3: 'comment3' }];
   const commentapi3 = [];
   const displayComment = (input) => {
     const commentSection = document.querySelector('.comment-section');
@@ -22,7 +22,7 @@ describe('checking the correct total number of comments', () => {
       `;
       commentSection.appendChild(commentItem);
     });
-  }
+  };
   test('should display the correct number of comments', () => {
     displayComment(commentapi1);
     expect(document.querySelector('.comment-counter').innerHTML).toBe('<i class="fa-solid fa-comment"></i>1 comments');
