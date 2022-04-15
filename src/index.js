@@ -4,17 +4,18 @@ import {
   addNewLikeToAPI,
   popupComments,
   closeCommentWindow,
-  getItemsTotal,
   addComment,
   displayComments,
   updateCommentCounter,
+  displayItemsTotal,
+  clearInputValues,
 } from '../modules/add.js';
 import { addNewApp } from '../modules/api2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   populateMeals();
   addNewApp();
-  getItemsTotal();
+  displayItemsTotal();
 });
 
 document.addEventListener('click', (e) => {
@@ -38,5 +39,6 @@ document.addEventListener('click', (e) => {
   if (e.target.className === 'comment-btn') {
     addComment(e.target.parentElement.parentElement.id);
     updateCommentCounter(e.target.parentElement.parentElement.id);
+    clearInputValues();
   }
 });

@@ -80,6 +80,13 @@ export const updateCommentCounter = async (itemID) => {
   counter.innerHTML = `<i class="fa-solid fa-comment"></i>${allComments.length ? allComments.length : 0} comments`;
 };
 
+export const clearInputValues = () => {
+  const nameInput = document.querySelector('.name-input');
+  const commentInput = document.querySelector('.comment-input');
+  nameInput.value = '';
+  commentInput.value = '';
+};
+
 export const updateLastComment = async (itemID) => {
   const allComments = await getComments(itemID);
   const lastComment = allComments[allComments.length - 1];
@@ -129,5 +136,10 @@ export const closeCommentWindow = () => {
 export const getItemsTotal = async () => {
   const allMeals = await getMeals();
   const mealsCount = allMeals.categories.length;
+  return mealsCount;
+};
+
+export const displayItemsTotal = async () => {
+  const mealsCount = await getItemsTotal();
   items.append(document.createTextNode(` (${mealsCount})`));
 };
