@@ -1,19 +1,18 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![ScreenShot](/src/assets/images/projectscreenshot1.JPG)
+![ScreenShot](/src/assets/images/projectscreenshot2.JPG)
+# S&S Flavours.
 
-# Project Name
-
-> Description the project.
-
+> This website is built based on an external API. It consists of various meals and their short informations. You can see meals on homepage. Besides, you can click on comments button to see brief intro and comments about the meal. Also on that popup window, you can add new comment by clicking comment button.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[S&S Flavours](https://fsher07.github.io/JavaScript-group-capstone/)
 
 
 ## Getting Started
