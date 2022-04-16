@@ -15,7 +15,7 @@
 [S&S Flavours](https://fsher07.github.io/JavaScript-group-capstone/dist)
 
 ## Presentation
-[Comments feautres](https://www.loom.com/share/607bc1f58ed64c8a9bc48305898c156f)
+[S&S Flavours Presentation](https://www.youtube.com/watch?v=eU37lI5AUOk)
 ## Getting Started
 
 > You can simply clone or download [this repository](https://github.com/Fsher07/JavaScript-group-capstone.git), and use your favorite browser or code editor to run this program.
