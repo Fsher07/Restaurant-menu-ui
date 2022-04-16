@@ -1,0 +1,235 @@
+
+/* Core Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  padding: 2% 15%;
+}
+
+/* Homepage-section */
+.list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  width: auto;
+  column-gap: 10%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5%;
+}
+
+.list-item .meal-image {
+  width: auto;
+  height: auto;
+}
+
+.list-item .meal-title {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item .meal-title h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.list-item .meal-title .like-icon {
+  color: #000;
+}
+
+.list-item .meal-likes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-item .comments,
+.list-item .reservations {
+  background: #fff;
+  padding: 2%;
+  font-family: 'Lato', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.navList {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+  margin-left: 20%;
+  font-size: 20px;
+}
+
+.tags {
+  color: #562629;
+}
+
+/* Footer-section */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 2px solid #000;
+  width: auto;
+  font-size: 18px;
+}
+
+.footer-section p {
+  margin-left: 3%;
+  padding: 2% 0;
+}
+
+.footer-section .bottom {
+  display: flex;
+  justify-content: flex-end;
+  background: gray;
+  border: 2px solid #000;
+  padding-right: 2px;
+}
+
+/* meal popup comment window */
+.comment-window {
+  display: none;
+}
+
+.show-comment-window {
+  display: grid;
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: translate(-50%, 0);
+  padding: 2rem;
+  z-index: 1;
+  box-shadow: 10px 10px 10px #000;
+  background: #fff;
+  border: 3px solid #000;
+}
+
+.comment-meal-image {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fa-x {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+}
+
+.comment-meal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.window-title {
+  margin: 2rem 0;
+  font-size: 15px;
+}
+
+.window-description {
+  font-size: 12px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 10%;
+}
+
+.comment-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.name-input {
+  width: 30%;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 0 5px;
+  font-size: 15px;
+}
+
+.comment-input {
+  width: 40%;
+  min-height: 60px;
+  border: 1px solid #000;
+  padding: 0 5px;
+  font-size: 15px;
+}
+
+.name-input,
+.comment-input:focus {
+  outline: none;
+}
+
+.comment-btn {
+  min-width: 20%;
+  width: fit-content;
+  height: 20px;
+  color: #000;
+  background: #fff;
+}
+
+.comment-list {
+  display: grid;
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(1, 3fr);
+  row-gap: 5px;
+}
+
+.comment-text {
+  display: flex;
+  font-size: 12px;
+}
+
+.comment-counter {
+  font-size: 12px;
+}
+
+.main-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}

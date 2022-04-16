@@ -1,62 +1,65 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![ScreenShot](/src/assets/images/projectscreenshot1.JPG)
+![ScreenShot](/src/assets/images/projectscreenshot2.JPG)
+# S&S Flavours.
 
-# Project Name
-
-> Description the project.
-
+> This website is built based on an external API. It consists of various meals and their short informations. You can see meals on homepage. Besides, you can click on comments button to see brief intro and comments about the meal. Also on that popup window, you can add new comment by clicking comment button.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[S&S Flavours](https://fsher07.github.io/JavaScript-group-capstone/dist)
 
-
+## Presentation
+[S&S Flavours Presentation](https://www.youtube.com/watch?v=eU37lI5AUOk)
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+> You can simply clone or download [this repository](https://github.com/Fsher07/JavaScript-group-capstone.git), and use your favorite browser or code editor to run this program.
 
+-To run the project locally, clone the project, and follow the commands below in order:
 
-To get a local copy up and running follow these simple example steps.
+```
+npm install
+```
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
+```
+npm install webpack webpack-cli --save-dev
+```
+```
+npm run build
+```
+```
+npm start
+```
 ### Run tests
 
-### Deployment
-
-
-
+```
+npm run test
+```
 ## Authors
 
-👤 **Author1**
+👤 **Solomon Hagan**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Achilles-Dev](https://github.com/Achilles-Dev/)
+- Twitter: [@SoloAchilles](https://twitter.com/SoloAchilles/)
+- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan-b51693138/)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Furkan Salim Hıdır**
+
+- GitHub: [Salim](https://github.com/Fsher07)
+- Twitter: [Salim](https://twitter.com/furkansalimhdr1)
+- LinkedIn: [Salim](https://www.linkedin.com/in/furkan-salim-h%C4%B1d%C4%B1r-3441ab1b2/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Fsher07/JavaScript-group-capstone/issues).
 
 ## Show your support
 
@@ -64,10 +67,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- Microverse
+- For external API thanks to https://www.themealdb.com/api.php
+- For external API thanks to https://us-central1-involvement-api.cloudfunctions.net/capstoneApi
