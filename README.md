@@ -46,7 +46,7 @@ npm run test
 
 - GitHub: [@Achilles-Dev](https://github.com/Achilles-Dev/)
 - Twitter: [@SoloAchilles](https://twitter.com/SoloAchilles/)
-- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan-b51693138/)
+- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan/)
 
 
 👤 **Furkan Salim Hıdır**
