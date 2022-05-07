@@ -1,5 +1,5 @@
-![ScreenShot](/src/assets/images/projectscreenshot1.JPG)
-![ScreenShot](/src/assets/images/projectscreenshot2.JPG)
+![ScreenShot](/src/assets/images/projectscreenshot1.jpg)
+![ScreenShot](/src/assets/images/projectscreenshot2.jpg)
 # S&S Flavours.
 
 > This website is built based on an external API. It consists of various meals and their short informations. You can see meals on homepage. Besides, you can click on comments button to see brief intro and comments about the meal. Also on that popup window, you can add new comment by clicking comment button.
